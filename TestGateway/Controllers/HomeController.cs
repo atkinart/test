@@ -10,7 +10,14 @@ namespace TestGateway.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Домашняя страница";
+
+            return View();
+        }
+        
+        public ActionResult API()
+        {
+            ViewBag.Title = "APIs";
 
             return View();
         }
