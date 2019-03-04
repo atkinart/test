@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
 using TestRest.Models;
@@ -54,13 +55,18 @@ namespace TestRest.Controllers
         }
 
         [HttpPost]
-        public StatusCodeResult createProduct(Product product)
+        public HttpResponseMessage createProduct(Product product)
         {
+
+//            if (ModelState.IsValid)
+//            {
+                return  new HttpResponseMessage(HttpStatusCode.Created);
+//            }
 
 //            new LimsService().UserLogin("test", "test");
 //
 ////            Console.WriteLine(product);
-            return StatusCode(HttpStatusCode.Created);
+//            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
         }
       
     }
