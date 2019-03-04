@@ -1,19 +1,72 @@
-<div class="row">
-    <div class="col-md-4">
-        <h2>Методы</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-            a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-            is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+<div class="container">
+    <h3>Получение списка продуктов</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <dl class="dl-horizontal">
+                <dt>path</dt>
+                <dd>
+                    <blockquote>
+                        <pre id="json"><b>GET</b> /api/products/</pre>
+                    </blockquote>
+                </dd>
+                <dt>request</dt>
+                <dd>
+                    <blockquote>
+                        <pre id="json">
+{
+    "id": 1
+}</pre>
+                    </blockquote>
+                </dd>
+                <dt>response</dt>
+                <dd>
+                    <blockquote>
+                        <pre>200 OK</pre>
+                        <pre id="json">
+{
+    "name": "Test",
+    "id": 1
+}</pre>
+
+                    </blockquote>
+                </dd>
+            </dl>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+
+    <h3>Получение продукта по {id}</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <dl class="dl-horizontal">
+                <dt>path</dt>
+                <dd>
+                    <blockquote>
+                        <pre id="json"><b>GET</b> /api/products/{id}</pre>
+                    </blockquote>
+                </dd>
+                <dt>request</dt>
+                <dd>
+                    <blockquote>
+                        <pre id="json">
+{
+    "id": 1
+}</pre>
+                    </blockquote>
+                </dd>
+                <dt>response</dt>
+                <dd>
+                    <blockquote>
+                        <p>
+                            <pre id="json">
+{
+    "name": "Test",
+    "id": 1
+}</pre>
+                        </p>
+                    </blockquote>
+                </dd>
+            </dl>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
+
 </div>
