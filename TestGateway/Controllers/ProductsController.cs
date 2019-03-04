@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
+using NLog;
 using TestRest.Models;
 using TestRest.Service;
 
@@ -14,6 +15,8 @@ namespace TestRest.Controllers
 {
     public class ProductsController : ApiController
     {
+        
+        private static Logger log = LogManager.GetCurrentClassLogger();
         Product[] products = new Product[]
         {
             new Product
@@ -30,6 +33,8 @@ namespace TestRest.Controllers
 
         public IEnumerable<Product> GetAllProducts()
         {
+            log.Info("INIT");
+            
             return products;
         }
 
@@ -57,6 +62,8 @@ namespace TestRest.Controllers
         [HttpPost]
         public HttpResponseMessage createProduct(Product product)
         {
+            
+            log.Info("INIT");
 
 //            if (ModelState.IsValid)
 //            {
